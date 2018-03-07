@@ -68,12 +68,13 @@ class MovieList extends React.Component {
                 <div className="MoviesList">
                     {this.state.movies.length > 0 ? (
                         this.state.movies.map((movie, i) => {
+                            console.log(movie);
                             return (
                                 <Movie
                                     key={movie.imdbID}
                                     id={movie.imdbID}
                                     title={movie.Title}
-                                    rating={movie.Ratings[1].Value}
+                                    rating={movie.Ratings[0].Value}
                                     posterURL={movie.Poster}
                                 />
                             );
