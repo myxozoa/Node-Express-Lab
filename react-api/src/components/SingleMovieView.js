@@ -9,7 +9,7 @@ class SingleMovieView extends React.Component {
   }
   componentDidMount() {
     const options = {
-      uri: `http://www.omdbapi.com/?i=${this.props.match.params.id}`,
+      uri: `https://www.omdbapi.com/?i=${this.props.match.params.id}`,
       qs: {
           apikey: 'd97400b0',
       },
