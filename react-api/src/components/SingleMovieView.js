@@ -47,8 +47,8 @@ class SingleMovieView extends React.Component {
             <div className='plot'>{movie.Plot}</div>
             <div className='awards'>{movie.Awards}</div>
             <div className='imdb-ratings'><span>{movie.Ratings[0].Source}</span>{': '}<span>{movie.Ratings[0].Value}</span></div>
-            <div className='rt-ratings'><span>{movie.Ratings[1].Source}</span>{': '}<span>{movie.Ratings[1].Value}</span></div>
-            <div className='mtc-ratings'><span>{movie.Ratings[2].Source}</span>{': '}<span>{movie.Ratings[2].Value}</span></div>
+            {movie.Ratings[1] ? <div className='rt-ratings'><span>{movie.Ratings[1].Source}</span>{': '}<span>{movie.Ratings[1].Value}</span></div> : null}
+            {movie.Ratings[2] ? <div className='mtc-ratings'><span>{movie.Ratings[2].Source}</span>{': '}<span>{movie.Ratings[2].Value}</span></div> : null}
           </div>
         </div>
         :
